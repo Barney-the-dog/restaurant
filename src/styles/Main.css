@@ -1,0 +1,29 @@
+.header {
+    text-align: center;
+    color: purple;
+}
+
+.list {
+    text-align: center;
+    color: slateblue;
+}
+
+.main {
+    background-color: beige;   
+}
+
+.main_img {
+    width: 100vw;
+}
+
+.picture {
+    width: 150px;
+}
+
+.card-body{
+    width: 200px;
+}
+
+.card_picture {
+    width: 70vw;
+}
