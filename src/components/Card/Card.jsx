@@ -2,7 +2,8 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { globalContext } from '../../contexts/globalContext';
-import "../../styles/Main.css"
+import "../../styles/Main.css";
+import defaultImage from '../../robjensen.jpg'
 
 function Card({id, text, image, description, location}) {
 
@@ -20,7 +21,7 @@ function Card({id, text, image, description, location}) {
       <div className="card">
        <div className="card-body">
        <h5 className="card-title">{text}</h5>
-       <img src={image} alt='card_picture' className='picture'/>
+       <img src={image ? image : defaultImage} alt='card_picture' className='picture'/>
        <p className="card-text">{description}</p>
        <p className='subtitle'>{location}</p>
        </div>
