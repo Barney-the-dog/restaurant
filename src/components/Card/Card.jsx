@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { globalContext } from '../../contexts/globalContext';
 import "../../styles/Main.css"
 
-function Card({id, text, image, description}) {
+function Card({id, text, image, description, location}) {
 
     const {dispatch} = useContext(globalContext)
 
@@ -20,8 +20,9 @@ function Card({id, text, image, description}) {
       <div className="card">
        <div className="card-body">
        <h5 className="card-title">{text}</h5>
-       <img src={image} alt='picture' className='picture'/>
+       <img src={image} alt='card_picture' className='picture'/>
        <p className="card-text">{description}</p>
+       <p className='subtitle'>{location}</p>
        </div>
        <Link to={`/edit/${id}`}>
        <button 

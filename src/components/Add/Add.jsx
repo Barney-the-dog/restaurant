@@ -10,6 +10,7 @@ function Add() {
     const [text, setText] = useState('')
     const [description, setDescription] = useState('');
     const [image, setImage] = useState('');
+    const [address, setAddress] = useState('');
   
     function handleSubmit(event){
       event.preventDefault()
@@ -21,6 +22,7 @@ function Add() {
           text,
           image,
           description,
+          address,
           id: Date.now(),
         }
       });
@@ -28,6 +30,7 @@ function Add() {
     setText('')
     setImage('')
     setDescription('')
+    setAddress('')
   } else {
     alert('Нельзя оставлять пустые поля');
   }
@@ -76,6 +79,19 @@ function Add() {
               value={description}
             />
           </div>
+          <label className="col-sm-2 col-form-label">
+            Адрес ресторана
+          </label>
+          <div className="col-sm-10">
+            <input
+              type="action"
+              className="form-control"
+              id="ction"
+              placeholder="введите адрес"
+              onChange={(event) => setAddress(event.target.value)}
+              value={address}
+            />
+            </div>
                       <div className="col-sm-10">
              <button type="submit" className="btn btn-primary">
                 Добавить
